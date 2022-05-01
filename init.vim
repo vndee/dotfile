@@ -14,7 +14,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
@@ -31,7 +31,7 @@ let mapleader = "\<Space>" " prefix key dùng để trigger các function hay ev
 filetype plugin on
 filetype plugin indent on
 
-autocmd BufEnter * :set scroll=10 " set croll line 
+" autocmd BufEnter * :set scroll=10 " set croll line 
 syntax on
 
 set encoding=UTF-8
@@ -39,6 +39,9 @@ set mouse=a " enable mouse trong context của neovim
 
 set incsearch 
 set hlsearch  " hightlight text khi search 
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 set tabstop=4 " space mỗi lần tab
 set softtabstop=0
@@ -64,4 +67,3 @@ set fillchars=vert:│
 autocmd ColorScheme * highlight VertSplit cterm=NONE ctermfg=Green ctermbg=NONE
 
 set nu
-
